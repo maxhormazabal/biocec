@@ -104,8 +104,50 @@
     background: var(--bs-light);
 }
 
+/*  */
+
+.icon-box-secondary,
+.icon-box-light {
+    position: relative;
+    padding: 0 0 10px 10px;
+    z-index: 1;
+}
+
+.icon-box-secondary i,
+.icon-box-light i {
+    font-size: 60px;
+    line-height: 0;
+}
+
+.icon-box-secondary::before,
+.icon-box-light::before {
+    position: absolute;
+    content: "";
+    width: 35px;
+    height: 35px;
+    left: 0;
+    bottom: 0;
+    border-radius: 35px;
+    transition: .5s;
+    z-index: -1;
+}
+
+.icon-box-secondary::before {
+    background: var(--bs-secondary);
+}
+
+.icon-box-light::before {
+    background: var(--bs-light);
+}
 
 /*** Navbar ***/
+
+.navbar {
+    border: 1px solid #b3b3b6;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    border-radius: 30px;
+}
+
 .sticky-top {
     top: -100px;
     transition: .5s;
@@ -135,6 +177,11 @@
 }
 
 @media (max-width: 991.98px) {
+    .navbar {
+        border: none;
+        box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+        border-radius: 0;
+    }
     .navbar .navbar-nav .nav-link  {
         margin-right: 0;
         padding: 10px 0;
@@ -552,8 +599,8 @@
 
 /*** Footer ***/
 .footer {
-    background: linear-gradient(rgba(3, 27, 78, .3), rgba(3, 27, 78, .3)), url(../img/footer.png) center center no-repeat;
     background-size: contain;
+    color: var(--bs-dark);
 }
 
 @media (min-width: 992px) {
@@ -605,3 +652,53 @@
 .copyright a:hover {
     color: var(--bs-primary);
 }
+
+
+/* Botón fijo */
+
+.fixed-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    z-index: 999;
+    transition: 0.5s;
+}
+
+.fixed-button:hover {
+    color: var(--bs-light);
+    background-color: var(--bs-primary);
+    transition: 0.5s;
+}
+
+@media (max-width: 768px) {
+    .fixed-button {
+        bottom: 100px;
+        right: 20px;
+        padding: 8px 16px;
+    }
+}
+
+/* .fixed-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    z-index: 999;
+}
+
+@media (max-width: 768px) {
+    .fixed-button {
+        bottom: 10px;
+        left: 10px;
+        padding: 8px 16px;
+    }
+} */
+
+
+
+/* Botón fijo */

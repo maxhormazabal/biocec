@@ -161,6 +161,15 @@
     color: var(--bs-primary);
 }
 
+.navbar-brand img {
+    width: 18rem;
+}
+
+@media (max-width: 800px) {
+    .navbar-brand img {
+        width: 13rem;
+    }
+}
 
 /*** Header ***/
 @media (min-width: 992px) {

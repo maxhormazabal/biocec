@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Infografía de proceso</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5+fsqXn3c7jFVC9aLOh4z+V/pG0SqdI9pdW0TaUJ"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        --i: var(--wide, 1);
+        --j: calc(1 - var(--i));
+        --k: calc(1 - var(--narr, 1));
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        font: 400 1em/1.25 coda, trebuchet ms, arial, sans-serif;
+      }
+
+      body:after {
+        margin-top: 1em;
+        width: 25em;
+        height: 1.5em;
+        max-width: 100%;
+        border-radius: 50%;
+        filter: blur(3px);
+        content: "";
+      }
+
+      @media (max-width: 43em) {
+        body {
+          --wide: 0;
+        }
+      }
+
+      @media (min-width: 270px) {
+        body {
+          --narr: 0;
+        }
+      }
+
+      p {
+        --p: var(--parity, 1);
+        --q: calc(1 - var(--p));
+        --s: calc(1 - 2 * var(--p));
+        display: flex;
+        flex-direction: var(--narr, column);
+        align-items: center;
+        justify-content: center;
+        margin: calc(var(--j) * 0.25em) 0;
+        padding: calc(var(--i) * 10em / var(--n) + var(--j) * 5vw)
+          calc(var(--i) * 10em + var(--j) * 2vw);
+        width: calc(var(--i) * 40em + var(--j) * 100%);
+        min-height: var(--wide, calc(40em / var(--n)));
+        transform: translate(calc(var(--i) * var(--s) * -1.5em));
+        background: var(--gradient);
+        color: HSL(0, 0%, calc(var(--p) * 100%));
+        text-align: var(--parity, right);
+        clip-path: var(--wide, polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%));
+        counter-increment: idx;
+        opacity: 0;
+      }
+
+      p:before {
+        margin: 0 calc(var(--k) * var(--q) * 0.25em) 0
+          calc(var(--k) * var(--p) * 0.25em);
+        order: calc(var(--k) * var(--p));
+        font-size: 4em;
+        content: counter(idx, decimal-leading-zero);
+      }
+
+      p:nth-child(odd) {
+        --parity: 0;
+        --gradient: linear-gradient(
+          to right,
+          #ffd400 0%,
+          #fde258 60%,
+          transparent 100%
+        ); /* Gradiente amarillo */
+      }
+
+      p:nth-child(even) {
+        --gradient: linear-gradient(
+          to left,
+          #003399 0%,
+          #4d689e 60%,
+          transparent 100%
+        ); /* Gradiente azul */
+      }
+
+      .title-span {
+        font-size: 2em;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateX(var(--translate-direction));
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      p.animate {
+        animation: fadeIn 1s forwards;
+        animation-delay: calc(var(--idx) * 0.5s);
+      }
+
+      p:nth-child(odd) {
+        --translate-direction: -100%;
+      }
+
+      p:nth-child(even) {
+        --translate-direction: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <style>
+      :root {
+        --n: 4;
+      }
+    </style>
+    <p style="--idx: 0"><span class="title-span">Recepción </span></p>
+    <p style="--idx: 1"><span class="title-span">Evaluación </span></p>
+    <p style="--idx: 2"><span class="title-span">Deliberación </span></p>
+    <p style="--idx: 3"><span class="title-span">Resolución </span></p>
+    <p style="--idx: 4"><span class="title-span">Seguimiento </span></p>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const observerOptions = {
+          root: null,
+          rootMargin: "0px",
+          threshold: 0.1,
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("animate");
+              observer.unobserve(entry.target); // Deja de observar una vez que la animación ha comenzado
+            }
+          });
+        }, observerOptions);
+
+        document.querySelectorAll("p").forEach((p) => {
+          observer.observe(p);
+        });
+      });
+    </script>
+  </body>
+</html>

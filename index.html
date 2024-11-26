@@ -30,6 +30,15 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5+fsqXn3c7jFVC9aLOh4z+V/pG0SqdI9pdW0TaUJ" crossorigin="anonymous">
+    </script>
 </head>
 
 <body>
@@ -40,60 +49,44 @@
     </div>
     <!-- Spinner End -->
 
-    <!-- Brand Start -->
-    <div class="container-fluid bg-primary text-white pt-4 pb-5 d-none d-lg-flex">
-        <div class="container pb-2">
-            <div class="d-flex align-items-center justify-content-center">
-                <a href="index.html" class="h1 text-white mb-0">
-                    <img src="./img/logo_horizontal_color.png" style="width: 10rem;filter: brightness(0) invert(1);" alt="">
-                </a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container-fluid px-5">
+            <!-- Logo al extremo izquierdo -->
+            <a class="navbar-brand me-auto" href="./index.html">
+            <img class="py-3 img-fluid" src="./img/logo_horizontal_color_dark.png" alt="">
+            </a>
+            <!-- Botón del toggler -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Links al extremo derecho -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0" style="font-size: 1.3rem;">
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="./documentos.html">Documentos</a></li>
+                <!-- <li class="nav-item"><a class="nav-link" href="./sesiones.html">Sesiones</a></li> -->
+                <!-- <li class="nav-item"><a class="nav-link" href="./">Arancel</a></li> -->
+                <li class="nav-item"><a class="nav-link" href="./contacto.html">Contacto</a></li>
+            </ul>
             </div>
         </div>
-    </div>
-    <!-- Brand End -->
-
-
-    <!-- Navbar Start -->
-    <div class="container-fluid sticky-top">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light bg-white py-lg-0 px-lg-3">
-                <a href="index.html" class="navbar-brand d-lg-none">
-                    <img src="./img/logo_horizontal_color.png" style="width: 10rem;" alt="">
-                </a>
-                <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse"
-                    data-bs-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav">
-                        <a href="index.html" class="nav-item nav-link active">Inicio</a>
-                        <a href="about.html" class="nav-item nav-link">Antecedentes Generales</a>
-                        <a href="service.html" class="nav-item nav-link">Funcionamiento</a>
-                        <a href="service.html" class="nav-item nav-link">Requisitos de Evaluación</a>
-                    </div>
-                    <div class="ms-auto d-none d-lg-flex">
-                        <a href="contact.html" class="nav-item nav-link">Contacto</a>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </div>
-    <!-- Navbar End -->
+        </nav>
 
 
     <!-- Carousel Start -->
     <div class="container-fluid header-carousel px-0 mb-5">
         <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner">
-                <div class="carousel-item active">
+                <!-- <div class="carousel-item active">
                     <img class="w-100" src="img/carousel-1.jpg" alt="Image">
                     <div class="carousel-caption">
                         <div class="container">
                             <div class="row justify-content-start">
                                 <div class="col-lg-7 text-start">
-                                    <h1 class="display-1 text-white animated slideInRight mb-3">Centro de Investigación Reconocido</h1>
-                                    <p class="mb-5 animated slideInRight">Nuestro centro de investigación ha sido reconocido por su compromiso con la ética y la excelencia científica. Desde su fundación, hemos trabajado incansablemente para proteger los derechos y el bienestar de quienes participan en nuestra investigación. ¡Únete a nosotros y explora más!</p>
-                                    <a href="" class="btn btn-primary py-3 px-5 animated slideInRight">Explorar Más</a>                                    
+                                    <h1 class="display-1 text-white animated slideInRight mb-3">Comité Ético Científico</h1>
+                                    <p class="mb-5 animated slideInRight">BIOCEC tiene como misión velar por los derechos, la seguridad, la dignidad y el bienestar de las personas que participan voluntariamente en los ensayos clínicos con seres humanos, respetando plenamente el ordenamiento jurídico de la investigación biomédica  nacional e internacional.</p>
                                 </div>
                             </div>
                         </div>
@@ -103,567 +96,194 @@
                     <img class="w-100" src="img/carousel-2.jpg" alt="Image">
                     <div class="carousel-caption">
                         <div class="container">
-                            <div class="row justify-content-end">
-                                <div class="col-lg-7 text-end">
-                                    <h1 class="display-1 text-white animated slideInRight mb-3">Centro de Excelencia en Investigación</h1>
-                                    <p class="mb-5 animated slideInRight">Somos un centro de excelencia en investigación comprometido con los más altos estándares éticos y científicos. Desde nuestra fundación, hemos trabajado arduamente para garantizar la integridad y la calidad de nuestra investigación. ¡Acompáñanos y descubre más!</p>
-                                    <a href="" class="btn btn-primary py-3 px-5 animated slideInRight">Explorar Más</a>                                    
+                            <div class="row justify-content-start">
+                                <div class="col-lg-7 text-start">
+                                    <h1 class="display-1 text-white animated slideInRight mb-3">Comité Ético Científico</h1>
+                                    <p class="mb-5 animated slideInRight">BIOCEC tiene como misión velar por los derechos, la seguridad, la dignidad y el bienestar de las personas que participan voluntariamente en los ensayos clínicos con seres humanos, respetando plenamente el ordenamiento jurídico de la investigación biomédica  nacional e internacional.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="carousel-item active">
+                    <img class="w-100" src="img/carousel-1.jpg" alt="Image">
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div class="row justify-content-start">
+                                <div class="col-lg-7 text-start">
+                                    <h1 class="display-1 text-white animated slideInRight mb-3">Comité Ético Científico</h1>
+                                    <p style="font-size: 1.3rem;" class="mb-5 text-white animated slideInRight">BIOCEC tiene como misión velar por los derechos, la seguridad, la dignidad y el bienestar de las personas que participan voluntariamente en los ensayos clínicos con seres humanos, respetando plenamente el ordenamiento jurídico de la investigación biomédica  nacional e internacional.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
+            <!-- <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
-            </button>
+            </button> -->
         </div>
     </div>
     <!-- Carousel End -->
 
 
-    <!-- About Start -->
-    <!-- <div class="container-fluid py-5">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="row g-0">
-                        <div class="col-6">
-                            <img class="img-fluid" src="img/about-1.jpg">
-                        </div>
-                        <div class="col-6">
-                            <img class="img-fluid" src="img/about-2.jpg">
-                        </div>
-                        <div class="col-6">
-                            <img class="img-fluid" src="img/about-3.jpg">
-                        </div>
-                        <div class="col-6">
-                            <div class="bg-primary w-100 h-100 mt-n5 ms-n5 d-flex flex-column align-items-center justify-content-center">
-                                <div class="icon-box-light">
-                                    <i class="bi bi-award text-dark"></i>
-                                </div>
-                                <h1 class="display-1 text-white mb-0" data-toggle="counter-up">25</h1>
-                                <small class="fs-5 text-white">Years Experience</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                    <h1 class="display-6 mb-4">Trusted Lab Experts and Latest Lab Technologies</h1>
-                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus augue, iaculis id elit eget, ultrices pulvinar tortor. Quisque vel lorem porttitor, malesuada arcu quis, fringilla risus. Pellentesque eu consequat augue.</p>
-                    <div class="row g-4 g-sm-5 justify-content-center">
-                        <div class="col-sm-6">
-                            <div class="about-fact btn-square flex-column rounded-circle bg-primary ms-sm-auto">
-                                <p class="text-white mb-0">Awards Winning</p>
-                                <h1 class="text-white mb-0" data-toggle="counter-up">9999</h1>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 text-start">
-                            <div class="about-fact btn-square flex-column rounded-circle bg-secondary me-sm-auto">
-                                <p class="text-white mb-0">Complete Cases</p>
-                                <h1 class="text-white mb-0" data-toggle="counter-up">9999</h1>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="about-fact mt-n130 btn-square flex-column rounded-circle bg-dark mx-sm-auto">
-                                <p class="text-white mb-0">Happy Clients</p>
-                                <h1 class="text-white mb-0" data-toggle="counter-up">9999</h1>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- About End -->
-
-
-    <!-- Features Start -->
-    <div class="container-fluid py-5">
-        <div class="container">
-            <div class="row g-0 feature-row">
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="feature-item border h-100 p-5">
-                        <div class="icon-box-primary mb-4">
-                            <i class="bi bi-award text-dark"></i>
-                        </div>
-                        <h5 class="mb-3">Award Winning</h5>
-                        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus augue.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
-                    <div class="feature-item border h-100 p-5">
-                        <div class="icon-box-primary mb-4">
-                            <i class="bi bi-people text-dark"></i>
-                        </div>
-                        <h5 class="mb-3">Expet Doctors</h5>
-                        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus augue.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
-                    <div class="feature-item border h-100 p-5">
-                        <div class="icon-box-primary mb-4">
-                            <i class="bi bi-cash-coin text-dark"></i>
-                        </div>
-                        <h5 class="mb-3">Fair Prices</h5>
-                        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus augue.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
-                    <div class="feature-item border h-100 p-5">
-                        <div class="icon-box-primary mb-4">
-                            <i class="bi bi-headphones text-dark"></i>
-                        </div>
-                        <h5 class="mb-3">24/7 Support</h5>
-                        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus augue.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Features End -->
-
-
-    <!-- Features Start -->
-    <!-- <div class="container-fluid feature mt-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container">
-            <div class="row g-0">
-                <div class="col-lg-6 pt-lg-5">
-                    <div class="bg-white p-5 mt-lg-5">
-                        <h1 class="display-6 mb-4 wow fadeIn" data-wow-delay="0.3s">The Best Medical Test & Laboratory Solution</h1>
-                        <p class="mb-4 wow fadeIn" data-wow-delay="0.4s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus augue, iaculis id elit eget, ultrices pulvinar tortor. Quisque vel lorem porttitor, malesuada arcu quis, fringilla risus. Pellentesque eu consequat augue.</p>
-                        <div class="row g-5 pt-2 mb-5">
-                            <div class="col-sm-6 wow fadeIn" data-wow-delay="0.3s">
-                                <div class="icon-box-primary mb-4">
-                                    <i class="bi bi-person-plus text-dark"></i>
-                                </div>
-                                <h5 class="mb-3">Experience Doctors</h5>
-                                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-                            </div>
-                            <div class="col-sm-6 wow fadeIn" data-wow-delay="0.4s">
-                                <div class="icon-box-primary mb-4">
-                                    <i class="bi bi-check-all text-dark"></i>
-                                </div>
-                                <h5 class="mb-3">Advanced Microscopy</h5>
-                                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-                            </div>
-                        </div>
-                        <a class="btn btn-primary py-3 px-5 wow fadeIn" data-wow-delay="0.5s" href="">Explore More</a>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="row h-100 align-items-end">
-                        <div class="col-12 wow fadeIn" data-wow-delay="0.3s">
-                            <div class="d-flex align-items-center justify-content-center" style="min-height: 300px;">
-                                <button type="button" class="btn-play" data-bs-toggle="modal"
-                                    data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
-                                    <span></span>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="bg-primary p-5">
-                                <div class="experience mb-4 wow fadeIn" data-wow-delay="0.3s">
-                                    <div class="d-flex justify-content-between mb-2">
-                                        <span class="text-white">Sample Preparation</span>
-                                        <span class="text-white">90%</span>
-                                    </div>
-                                    <div class="progress">
-                                        <div class="progress-bar bg-dark" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                                <div class="experience mb-4 wow fadeIn" data-wow-delay="0.4s">
-                                    <div class="d-flex justify-content-between mb-2">
-                                        <span class="text-white">Result Accuracy</span>
-                                        <span class="text-white">95%</span>
-                                    </div>
-                                    <div class="progress">
-                                        <div class="progress-bar bg-dark" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                                <div class="experience mb-0 wow fadeIn" data-wow-delay="0.5s">
-                                    <div class="d-flex justify-content-between mb-2">
-                                        <span class="text-white">Lab Equipments</span>
-                                        <span class="text-white">90%</span>
-                                    </div>
-                                    <div class="progress">
-                                        <div class="progress-bar bg-dark" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- Features End -->
-
-
-    <!-- Video Modal Start -->
-    <!-- <div class="modal modal-video fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content rounded-0">
-                <div class="modal-header">
-                    <h3 class="modal-title" id="exampleModalLabel">Youtube Video</h3>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="ratio ratio-16x9">
-                        <iframe class="embed-responsive-item" src="" id="video" allowfullscreen
-                            allowscriptaccess="always" allow="autoplay"></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- Video Modal End -->
-
-
-    <!-- Service Start -->
-    <div class="container-fluid container-service py-5">
+    <!-- Mision Start -->
+    <!-- <div class="container-fluid container-service py-5">
         <div class="container pt-5">
             <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <h1 class="display-6 mb-3">Reliable & High-Quality Laboratory Service</h1>
-                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus augue, iaculis id elit eget, ultrices pulvinar tortor.</p>
-            </div>
-            <div class="row g-4">
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item">
-                        <div class="icon-box-primary mb-4">
-                            <i class="bi bi-heart-pulse text-dark"></i>
-                        </div>
-                        <h5 class="mb-3">Pathology Testing</h4>
-                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus augue.</p>
-                        <a class="btn btn-light px-3" href="">Read More<i class="bi bi-chevron-double-right ms-1"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item">
-                        <div class="icon-box-primary mb-4">
-                            <i class="bi bi-lungs text-dark"></i>
-                        </div>
-                        <h5 class="mb-3">Microbiology Tests</h4>
-                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus augue.</p>
-                        <a class="btn btn-light px-3" href="">Read More<i class="bi bi-chevron-double-right ms-1"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item">
-                        <div class="icon-box-primary mb-4">
-                            <i class="bi bi-virus text-dark"></i>
-                        </div>
-                        <h5 class="mb-3">Biochemistry Tests</h4>
-                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus augue.</p>
-                        <a class="btn btn-light px-3" href="">Read More<i class="bi bi-chevron-double-right ms-1"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="service-item">
-                        <div class="icon-box-primary mb-4">
-                            <i class="bi bi-capsule-pill text-dark"></i>
-                        </div>
-                        <h5 class="mb-3">Histopatology Tests</h4>
-                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus augue.</p>
-                        <a class="btn btn-light px-3" href="">Read More<i class="bi bi-chevron-double-right ms-1"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item">
-                        <div class="icon-box-primary mb-4">
-                            <i class="bi bi-capsule text-dark"></i>
-                        </div>
-                        <h5 class="mb-3">Urine Tests</h4>
-                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus augue.</p>
-                        <a class="btn btn-light px-3" href="">Read More<i class="bi bi-chevron-double-right ms-1"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item">
-                        <div class="icon-box-primary mb-4">
-                            <i class="bi bi-prescription2 text-dark"></i>
-                        </div>
-                        <h5 class="mb-3">Blood Tests</h4>
-                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus augue.</p>
-                        <a class="btn btn-light px-3" href="">Read More<i class="bi bi-chevron-double-right ms-1"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item">
-                        <div class="icon-box-primary mb-4">
-                            <i class="bi bi-clipboard2-pulse text-dark"></i>
-                        </div>
-                        <h5 class="mb-3">Fever Tests</h4>
-                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus augue.</p>
-                        <a class="btn btn-light px-3" href="">Read More<i class="bi bi-chevron-double-right ms-1"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="service-item">
-                        <div class="icon-box-primary mb-4">
-                            <i class="bi bi-file-medical text-dark"></i>
-                        </div>
-                        <h5 class="mb-3">Allergy Tests</h4>
-                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus augue.</p>
-                        <a class="btn btn-light px-3" href="">Read More<i class="bi bi-chevron-double-right ms-1"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Service End -->
-
-
-    <!-- Appoinment Start -->
-    <!-- <div class="container-fluid py-5">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <h1 class="display-6 mb-4">We Ensure You Will Always Get The Best Result</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus augue, iaculis id elit eget, ultrices pulvinar tortor. Quisque vel lorem porttitor, malesuada arcu quis, fringilla risus. Pellentesque eu consequat augue.</p>
-                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus augue, iaculis id elit eget, ultrices pulvinar tortor.</p>
-                    <div class="d-flex align-items-start wow fadeIn" data-wow-delay="0.3s">
-                        <div class="icon-box-primary">
-                            <i class="bi bi-geo-alt text-dark fs-1"></i>
-                        </div>
-                        <div class="ms-3">
-                            <h5>Office Address</h5>
-                            <span>123 Street, New York, USA</span>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="d-flex align-items-start wow fadeIn" data-wow-delay="0.4s">
-                        <div class="icon-box-primary">
-                            <i class="bi bi-clock text-dark fs-1"></i>
-                        </div>
-                        <div class="ms-3">
-                            <h5>Office Time</h5>
-                            <span>Mon-Sat 09am-5pm, Sun Closed</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <h2 class="mb-4">Online Appoinment</h2>
-                    <div class="row g-3">
-                        <div class="col-sm-6">
-                            <div class="form-floating">
-                                <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                <label for="name">Your Name</label>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="form-floating">
-                                <input type="email" class="form-control" id="mail" placeholder="Your Email">
-                                <label for="mail">Your Email</label>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="form-floating">
-                                <input type="text" class="form-control" id="mobile" placeholder="Your Mobile">
-                                <label for="mobile">Your Mobile</label>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="form-floating">
-                                <select class="form-select" id="service">
-                                    <option selected>Pathology Testing</option>
-                                    <option value="">Microbiology Tests</option>
-                                    <option value="">Biochemistry Tests</option>
-                                    <option value="">Histopatology Tests</option>
-                                </select>
-                                <label for="service">Choose A Service</label>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="form-floating">
-                                <textarea class="form-control" placeholder="Leave a message here" id="message"
-                                    style="height: 130px"></textarea>
-                                <label for="message">Message</label>
-                            </div>
-                        </div>
-                        <div class="col-12 text-center">
-                            <button class="btn btn-primary w-100 py-3" type="submit">Submit Now</button>
-                        </div>
-                    </div>
-                </div>
+                <h1 class="display-6 mb-3">Nuestra Misión</h1>
+                <p class="h2 mb-5">BIOCEC tiene como misión velar por los derechos, la seguridad, la dignidad y el bienestar de las personas que participan voluntariamente en los ensayos clínicos con seres humanos, respetando plenamente el ordenamiento jurídico de la investigación biomédica  nacional e internacional.</p>
             </div>
         </div>
     </div> -->
-    <!-- Appoinment Start -->
+    <!-- Mision End -->
 
+    <!-- About Start -->
+    <div class="container-fluid py-5">
+        
+        <div class="container">
+            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h1 class="display-6 mb-3">Nuestro Proceso</h1>
+            </div>
+            <iframe src="./infografia.html" style="width:100%;height:100vh;border: none;"></iframe>
+        </div>
+    </div>
+    <!-- About End -->
 
     <!-- Team Start -->
-    <div class="container-fluid container-team py-5">
+    <div class="container-fluid container-team">
         <div class="container pb-5">
-            <!-- <div class="row g-5 align-items-center mb-5">
-                <div class="col-md-6 wow fadeIn" data-wow-delay="0.3s">
-                    <img class="img-fluid w-100" src="img/team-1.jpg" alt="">
-                </div>
-                <div class="col-md-6 wow fadeIn" data-wow-delay="0.5s">
-                    <h1 class="display-6 mb-3">Dr. John Martin</h1>
-                    <p class="mb-1">CEO & Founder</p>
-                    <p class="mb-5">Labsky, New York, USA</p>
-                    <h3 class="mb-3">Biography</h3>
-                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus augue, iaculis id elit eget, ultrices pulvinar tortor. Quisque vel lorem porttitor, malesuada arcu quis, fringilla risus. Pellentesque eu consequat augue.</p>
-                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus augue, iaculis id elit eget, ultrices pulvinar tortor. Quisque vel lorem porttitor, malesuada arcu quis, fringilla risus. Pellentesque eu consequat augue.</p>
-                    <div class="d-flex">
-                        <a class="btn btn-lg-square btn-primary me-2" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-lg-square btn-primary me-2" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-lg-square btn-primary me-2" href=""><i class="fab fa-linkedin-in"></i></a>
-                        <a class="btn btn-lg-square btn-primary me-2" href=""><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-            </div> -->
             <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <h1 class="display-6 mb-3">Team</h1>
-                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus augue, iaculis id elit eget, ultrices pulvinar tortor.</p>
+                <h1 class="display-6 mb-3">Nuestro Equipo</h1>
             </div>
-            <div class="row g-4">
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/team-2.jpg" alt="">
-                            <div class="team-social">
-                                <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                                <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-youtube"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-1">Alex Robin</h5>
-                            <span>Lab Assistant</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-item">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/team-3.jpg" alt="">
-                            <div class="team-social">
-                                <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                                <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-youtube"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-1">Andrew Bon</h5>
-                            <span>Lab Assistant</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="team-item">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/team-4.jpg" alt="">
-                            <div class="team-social">
-                                <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                                <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-youtube"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-1">Martin Tompson</h5>
-                            <span>Lab Assistant</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="team-item">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/team-5.jpg" alt="">
-                            <div class="team-social">
-                                <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                                <a class="btn btn-square btn-light mx-1" href=""><i class="fab fa-youtube"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-1">Clarabelle Samber</h5>
-                            <span>Lab Assistant</span>
-                        </div>
-                    </div>
-                </div>
+
+            <div class="list-group pt-5">
+                <a style="pointer-events: none;cursor: default;" href="#" class="list-group-item list-group-item-action" aria-current="true">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1 text-primary">Francisca Miranda Báez</h5>
+                    <small>Presidente</small>
+                  </div>
+                  <p class="mb-1">Ingeniero en Biotecnología</p>
+                  <p class="mb-1">Diplomada en Ética de la Investigación</p>
+                  <p class="mb-1">Diplomada en Bioética del Medio Ambiente</p>
+                </a>
+                <a style="pointer-events: none;cursor: default;" href="#" class="list-group-item list-group-item-action" aria-current="true">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1 text-primary">Carolina Marchant Carrasco</h5>
+                    <small>Vicepresidente</small>
+                  </div>
+                  <p class="mb-1">Médico Veterinario</p>
+                  <p class="mb-1">Magíster en Salud Pública</p>
+                  <p class="mb-1">Diplomada en Biología Celular y Molecular</p>
+                </a>
+                <a style="pointer-events: none;cursor: default;" href="#" class="list-group-item list-group-item-action" aria-current="true">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1 text-primary">Francisco Zurita Garrido</h5>
+                    <small>Coordinador Comité</small>
+                  </div>
+                  <p class="mb-1">Enfermero</p>
+                </a>
+                <a style="pointer-events: none;cursor: default;" href="#" class="list-group-item list-group-item-action" aria-current="true">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1 text-primary">Mirla Aldana Sandoval</h5>
+                    <small>Vocal</small>
+                  </div>
+                  <p class="mb-1">Médico Oncólogo</p>
+                </a>
+                <a style="pointer-events: none;cursor: default;" href="#" class="list-group-item list-group-item-action" aria-current="true">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1 text-primary">Florencia Daroch Bucarey</h5>
+                    <small>Vocal</small>
+                  </div>
+                  <p class="mb-1">Médico Cirujano</p>
+                </a>
+                <a style="pointer-events: none;cursor: default;" href="#" class="list-group-item list-group-item-action" aria-current="true">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1 text-primary">Elizabeth Gatica Maureira</h5>
+                    <small>Vocal – Miembro de la Comunidad</small>
+                  </div>
+                  <p class="mb-1">Secretaria Ejecutiva</p>
+                </a>
+                <a style="pointer-events: none;cursor: default;" href="#" class="list-group-item list-group-item-action" aria-current="true">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1 text-primary">Ximena Pincheira Díaz</h5>
+                    <small>Vocal – Miembro de la Comunidad</small>
+                  </div>
+                  <p class="mb-1">Educadora Diferencial mención Discapacidad Intelectual</p>
+                </a>
+                <a style="pointer-events: none;cursor: default;" href="#" class="list-group-item list-group-item-action" aria-current="true">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1 text-primary">Samuel Zurita Inostroza</h5>
+                    <small>Vocal</small>
+                  </div>
+                  <p class="mb-1">Abogado</p>
+                </a>
+                <a style="pointer-events: none;cursor: default;" href="#" class="list-group-item list-group-item-action" aria-current="true">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1 text-primary">Constanza Neira Urrutia</h5>
+                    <small>Vocal</small>
+                  </div>
+                  <p class="mb-1">Enfermera</p>
+                  <p class="mb-1">Magíster en Epidemiología</p>
+                  <p class="mb-1">Magíster en Data Science</p>
+                  <p class="mb-1">Diplomado en Data Science Avanzada</p>
+                  <p class="mb-1">Diplomado en Big Data</p>
+                  <p class="mb-1">Diplomado en Docencia Universitaria</p>
+                </a>
+                <a style="pointer-events: none;cursor: default;" href="#" class="list-group-item list-group-item-action" aria-current="true">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1 text-primary">Ariadna Garros Sepúlveda</h5>
+                    <small>Vocal</small>
+                  </div>
+                  <p class="mb-1">Enfermera</p>
+                  <p class="mb-1">Magíster en Docencia Universitaria</p>
+                  <p class="mb-1">Diplomada en Oncología General y Cuidados de Enfermería</p>
+                  <p class="mb-1">Diplomada en Simulación Clínica en Salud</p>
+                </a>
+                <a style="pointer-events: none;cursor: default;" href="#" class="list-group-item list-group-item-action" aria-current="true">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1 text-primary">Pía Miranda Báez</h5>
+                    <small>Vocal</small>
+                  </div>
+                  <p class="mb-1">Cirujano Dentista </p>
+                  <p class="mb-1">Especialidad en Odontopediatría</p>
+                </a>
+                <a style="pointer-events: none;cursor: default;" href="#" class="list-group-item list-group-item-action" aria-current="true">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1 text-primary">Christian Silva Nome</h5>
+                    <small>Vocal</small>
+                  </div>
+                  <p class="mb-1">Cirujano Dentista</p>
+                  <p class="mb-1">Especialidad en Periodoncia e Implantología Oral</p>
+                </a>
+            </div>
+
             </div>
         </div>
     </div>
     <!-- Team End -->
 
 
-    <!-- Testimonial Start -->
-    <div class="container-fluid testimonial py-5">
-        <div class="container pt-5">
-            <div class="row gy-5 gx-0">
-                <div class="col-lg-6 pe-lg-5 wow fadeIn" data-wow-delay="0.3s">
-                    <h1 class="display-6 text-white mb-4">What Clients Say About Our Lab Services!</h1>
-                    <p class="text-white mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus augue, iaculis id elit eget, ultrices pulvinar tortor.</p>
-                    <a href="" class="btn btn-primary py-3 px-5">More Testimonials</a>
-                </div>
-                <div class="col-lg-6 mb-n5 wow fadeIn" data-wow-delay="0.5s">
-                    <div class="bg-white p-5">
-                        <div class="owl-carousel testimonial-carousel wow fadeIn" data-wow-delay="0.1s">
-                            <div class="testimonial-item">
-                                <div class="icon-box-primary mb-4">
-                                    <i class="bi bi-chat-left-quote text-dark"></i>
-                                </div>
-                                <p class="fs-5 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus augue, iaculis id elit eget, ultrices pulvinar tortor. Quisque vel lorem porttitor, malesuada arcu quis, fringilla risus. Pellentesque eu consequat augue.</p>
-                                <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0" src="img/testimonial-1.jpg" alt="">
-                                    <div class="ps-3">
-                                        <h5 class="mb-1">Client Name</h5>
-                                        <span class="text-primary">Profession</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="testimonial-item">
-                                <div class="icon-box-primary mb-4">
-                                    <i class="bi bi-chat-left-quote text-dark"></i>
-                                </div>
-                                <p class="fs-5 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus augue, iaculis id elit eget, ultrices pulvinar tortor. Quisque vel lorem porttitor, malesuada arcu quis, fringilla risus. Pellentesque eu consequat augue.</p>
-                                <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0" src="img/testimonial-2.jpg" alt="">
-                                    <div class="ps-3">
-                                        <h5 class="mb-1">Client Name</h5>
-                                        <span class="text-primary">Profession</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Testimonial End -->
-
+    <a href="#" class="fixed-button btn-secondary rounded-pill">Someter Protocolo</a>
 
     <!-- Footer Start -->
-    <div class="container-fluid footer position-relative bg-dark text-white-50 py-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container-fluid footer position-relative bg-light text-primary-50 py-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container">
             <div class="row g-5 py-5">
                 <div class="col-lg-6 pe-lg-5">
                     <a href="index.html" class="navbar-brand">
-                        <img src="./img/logo_horizontal_color.png" style="width: 13rem;filter: brightness(0) invert(1);" alt="">
+                        <img class="pb-3" src="./img/logo_horizontal_color_dark.png" style="width: 20rem;" alt="">
                     </a>
                     <p class="fs-5 mb-4">Conversemos para que puedas resolver todas tus dudas acerca de nuestro comité de ética!</p>
-                    <p><i class="fa fa-map-marker-alt me-2"></i><a class="text-light" href="https://goo.gl/maps/DLA9LBs4oufcphHK9">Lincoyán 334, piso 7. Concepción</a></p> 
-                    <p><i class="fa fa-phone-alt me-2"></i><a class="text-light" href="mailto:contacto@biocec.cl">contacto@biocenter.cl</a></p>
-                    <p><i class="fa fa-envelope me-2"></i><a class="text-light" href="tel:+56412858421">+56 41 285 8421</a></p>
-                    <div class="d-flex mt-4">
-                        <a class="btn btn-lg-square btn-primary me-2" href="#"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-lg-square btn-primary me-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-lg-square btn-primary me-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a class="btn btn-lg-square btn-primary me-2" href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
+                    <p><i class="fa fa-map-marker-alt me-2"></i><a class="text-dark" href="https://goo.gl/maps/DLA9LBs4oufcphHK9">Lincoyán 334, piso 7. Concepción</a></p> 
+                    <p><i class="fa fa-phone-alt me-2"></i><a class="text-dark" href="mailto:coordinacion@biocec.cl">coordinacion@biocec.cl</a></p>
+                    <p><i class="fa fa-envelope me-2"></i><a class="text-dark" href="tel:+56968293646">+56 9 6829 3646</a></p>
                 </div>
             </div>
         </div>
@@ -676,7 +296,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 text-center text-md-start">
-                    <p class="mb-0">&copy; <a href="#">Your Site Name</a>. All Rights Reserved.</p>
+                    <p class="mb-0">&copy; <a href="#">BIOCEC</a>. Todos los derechos reservados.</p>
                 </div>
                 <div class="col-md-6 text-center text-md-end">
                     <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
@@ -689,8 +309,7 @@
 
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
-
+    <!-- <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a> -->
 
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>

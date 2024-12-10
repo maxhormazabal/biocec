@@ -30,6 +30,7 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <!-- <link href="css/infograph.css" rel="stylesheet"> -->
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -145,13 +146,144 @@
     <!-- Mision End -->
 
     <!-- About Start -->
-    <div class="container-fluid py-5">
+    <!-- <div class="container-fluid py-5">
         
         <div class="container">
             <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
                 <h1 class="display-6 mb-3">Nuestro Proceso</h1>
             </div>
             <iframe src="./infografia.html" style="width:100%;height:100vh;border: none;"></iframe>
+        </div>
+    </div> -->
+    <!-- About End -->
+
+    <!-- About Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h1 class="display-6 mb-3">Nuestro Proceso</h1>
+            </div>
+            <div id="infografia-proceso">
+                <style>
+                  #infografia-proceso {
+                    --n: 5;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 2rem 0;
+                    font: 400 1em/1.25 coda, trebuchet ms, arial, sans-serif;
+                  }
+            
+                  #infografia-proceso p {
+                    --p: var(--parity, 1);
+                    --q: calc(1 - var(--p));
+                    --s: calc(1 - 2 * var(--p));
+                    display: flex;
+                    flex-direction: row; /* Mantener disposición en fila */
+                    align-items: center;
+                    justify-content: center;
+                    margin: 0.2rem 0; /* Disminuir margen */
+                    padding: 1rem 2rem;
+                    width: 80%;
+                    max-width: 40rem;
+                    min-height: 8rem; /* Aumentar altura mínima */
+                    transform: translate(calc(var(--s) * -1.5em));
+                    background: var(--gradient);
+                    color: HSL(0, 0%, calc(var(--p) * 100%));
+                    text-align: var(--parity, right);
+                    counter-increment: idx;
+                    opacity: 0;
+                    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+                  }
+            
+                  #infografia-proceso p:before {
+                    margin: 0.5rem;
+                    font-size: 3rem;
+                    content: counter(idx, decimal-leading-zero);
+                    order: 0; /* Aparece después del texto */
+                  }
+            
+                  #infografia-proceso p .title-span {
+                    order: 1; /* Texto aparece primero */
+                    font-size: 2rem;
+                  }
+            
+                  #infografia-proceso p:nth-child(odd) {
+                    --parity: 0;
+                    --gradient: linear-gradient(
+                      to right,
+                      #ffd400 0%,
+                      #fde258 60%,
+                      transparent 100%
+                    );
+                  }
+            
+                  #infografia-proceso p:nth-child(even) {
+                    --gradient: linear-gradient(
+                      to left,
+                      #003399 0%,
+                      #4d689e 60%,
+                      transparent 100%
+                    );
+                  }
+            
+                  @keyframes fadeIn {
+                    from {
+                      opacity: 0;
+                      transform: translateX(var(--translate-direction));
+                    }
+                    to {
+                      opacity: 1;
+                      transform: translateX(0);
+                    }
+                  }
+            
+                  #infografia-proceso p.animate {
+                    animation: fadeIn 1s forwards;
+                    animation-delay: calc(var(--idx) * 0.5s);
+                  }
+            
+                  #infografia-proceso p:nth-child(odd) {
+                    --translate-direction: -100%;
+                  }
+            
+                  #infografia-proceso p:nth-child(even) {
+                    --translate-direction: 100%;
+                  }
+                </style>
+            
+                <p style="--idx: 0"><span class="title-span">Recepción</span></p>
+                <p style="--idx: 1"><span class="title-span">Evaluación</span></p>
+                <p style="--idx: 2"><span class="title-span">Deliberación</span></p>
+                <p style="--idx: 3"><span class="title-span">Resolución</span></p>
+                <p style="--idx: 4"><span class="title-span">Seguimiento</span></p>
+            
+                <script>
+                  document.addEventListener("DOMContentLoaded", function () {
+                    const observerOptions = {
+                      root: null,
+                      rootMargin: "0px",
+                      threshold: 0.1,
+                    };
+            
+                    const observer = new IntersectionObserver((entries, observer) => {
+                      entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                          entry.target.classList.add("animate");
+                          observer.unobserve(entry.target);
+                        }
+                      });
+                    }, observerOptions);
+            
+                    document
+                      .querySelectorAll("#infografia-proceso p")
+                      .forEach((p) => observer.observe(p));
+                  });
+                </script>
+            </div>
+            
+              
         </div>
     </div>
     <!-- About End -->
@@ -281,9 +413,12 @@
                         <img class="pb-3" src="./img/logo_horizontal_color_dark.png" style="width: 20rem;" alt="">
                     </a>
                     <p class="fs-5 mb-4">Conversemos para que puedas resolver todas tus dudas acerca de nuestro comité de ética!</p>
-                    <p><i class="fa fa-map-marker-alt me-2"></i><a class="text-dark" href="https://goo.gl/maps/DLA9LBs4oufcphHK9">Lincoyán 334, piso 7. Concepción</a></p> 
-                    <p><i class="fa fa-phone-alt me-2"></i><a class="text-dark" href="mailto:coordinacion@biocec.cl">coordinacion@biocec.cl</a></p>
-                    <p><i class="fa fa-envelope me-2"></i><a class="text-dark" href="tel:+56968293646">+56 9 6829 3646</a></p>
+                    <p><i class="fa fa-map-marker-alt me-2"></i><a class="text-dark" href="https://goo.gl/maps/DLA9LBs4oufcphHK9">Lincoyán 334, piso 4. Concepción</a></p> 
+                    <p><i class="fa fa-envelope me-2"></i><a class="text-dark" href="mailto:coordinador@biocec.cl">coordinador@biocec.cl</a></p>
+                    <p><i class="fa fa-envelope me-2"></i><a class="text-dark" href="mailto:presidente@biocec.cl">presidente@biocec.cl</a></p>
+                    <p><i class="fa fa-envelope me-2"></i><a class="text-dark" href="mailto:finanzas@biocec.cl">finanzas@biocec.cl</a></p>
+                    <p><i class="fa fa-phone-alt me-2"></i><a class="text-dark" href="tel:+56968293646">+56 9 6829 3646</a></p>
+                    <p><i class="fa fa-phone-alt me-2"></i><a class="text-dark" href="tel:+56968295253">+56 9 6829 5253</a></p>
                 </div>
             </div>
         </div>

@@ -32,6 +32,26 @@ const pdfDocuments = [
     name: "Notificación Eventos Adversos Serios",
     path: "./documentos/Notificación Eventos Adversos Serios.pdf",
   },
+  {
+    name: "Calendario Sesiones 2025",
+    path: "./documentos/Calendario Sesiones BIOCEC 2025.pdf",
+  },
+  {
+    name: "Cumplimiento GCP 2025",
+    path: "./documentos/Cumplimiento GCP BIOCEC 2025.pdf",
+  },
+  {
+    name: "Nomina Integrantes 2025",
+    path: "./documentos/Nomina Integrantes BIOCEC 2025.pdf",
+  },
+  {
+    name: "Resolución 250835574",
+    path: "./documentos/RESOLUCION_250835574.pdf",
+  },
+  {
+    name: "Valores 2025",
+    path: "./documentos/Valores BIOCEC 2025.pdf",
+  },
 ];
 
 // Función para generar la lista

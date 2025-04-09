@@ -2,8 +2,8 @@
 const pdfDocuments = [
   {
     name: "Reglamento Interno",
-    path: "./documentos/BIOCEC_Reglamento_interno_v10_29oct2024.pdf",
-    downloaded_filename: "BIOCEC_Reglamento_interno_v10_29oct2024",
+    path: "./documentos/BIOCEC_Reglamento_interno_v21_16dic2024.pdf",
+    downloaded_filename: "BIOCEC_Reglamento_interno_v21_16dic2024",
   },
   {
     name: "Carta de Compromiso Investigador Principal y Sub Investigador",

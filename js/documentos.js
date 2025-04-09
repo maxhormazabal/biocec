@@ -89,16 +89,22 @@ function generatePDFList(documents) {
     docInfo.className = "ms-2 me-auto";
     docInfo.innerHTML = `<div>${doc.name}</div>`;
 
-    // Crear el botón de descarga
-    const downloadLink = document.createElement("a");
-    downloadLink.href = doc.path;
-    downloadLink.className = "bg-primary rounded-pill text-light px-2";
-    downloadLink.textContent = "Descargar";
-    downloadLink.download = doc.downloaded_filename;
+    // Crear el botón para ver el PDF
+    const viewLink = document.createElement("a");
+
+    // Obtener solo el nombre del archivo del path
+    const pdfFileName = doc.path.split("/").pop();
+
+    // Construir la URL limpia
+    viewLink.href = `https://biocec.cl/documentos/${pdfFileName}`;
+    viewLink.target = "_blank";
+    viewLink.className = "bg-primary rounded-pill text-light px-2";
+    viewLink.textContent = "Ver documento";
+    viewLink.rel = "noopener noreferrer";
 
     // Agregar los elementos al elemento <li>
     listItem.appendChild(docInfo);
-    listItem.appendChild(downloadLink);
+    listItem.appendChild(viewLink);
 
     // Agregar el <li> al contenedor de la lista
     listContainer.appendChild(listItem);
